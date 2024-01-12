@@ -62,7 +62,7 @@ jobs:
         git add .
         git commit -m "Apply Black formatting"
         echo "Current branch: ${{ github.head_ref }}"
-        # git push origin "${{ github.head_ref }}"
+        git push origin "${{ github.head_ref }}"
         # git push
 
     # - name: Commit changes
@@ -133,7 +133,7 @@ jobs:
         git add .
         git commit -m "Apply Prettier formatting"
         echo "Current branch: ${{ github.head_ref }}"
-        # git push origin "${{ github.head_ref }}"
+        git push origin "${{ github.head_ref }}"
         # git push
 
     # - name: Commit changes (Prettier)      
