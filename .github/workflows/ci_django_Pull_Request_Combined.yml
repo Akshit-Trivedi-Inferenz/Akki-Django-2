@@ -65,7 +65,8 @@ jobs:
         # git push origin "${{ github.head_ref }}"
         # git push
         git pull origin ${{ github.head_ref }} --rebase # Pull recent changes and rebase
-        git push origin HEAD:${{ github.head_ref }}
+        # git push origin HEAD:${{ github.head_ref }}
+        git push
 
     # - name: Commit changes
     #   if: ${{ steps.action_black.outputs.black_changed == 'true' }}
