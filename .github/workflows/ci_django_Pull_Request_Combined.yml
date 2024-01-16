@@ -63,7 +63,9 @@ jobs:
         git commit -m "Apply Black formatting"
         echo "Current branch: ${{ github.head_ref }}"
         # git push origin "${{ github.head_ref }}"
-        git push
+        # git push
+        git pull origin ${{ github.head_ref }} --rebase # Pull recent changes and rebase
+        git push origin HEAD:${{ github.head_ref }}
 
     # - name: Commit changes
     #   if: ${{ steps.action_black.outputs.black_changed == 'true' }}
@@ -134,7 +136,9 @@ jobs:
         git commit -m "Apply Prettier formatting"
         echo "Current branch: ${{ github.head_ref }}"
         # git push origin "${{ github.head_ref }}"
-        git push
+        # git push
+        git pull origin ${{ github.head_ref }} --rebase # Pull recent changes and rebase
+        git push origin HEAD:${{ github.head_ref }}
 
     # - name: Commit changes (Prettier)      
     #   if: steps.check_prettier.outputs.changes == 'true'    
