@@ -63,7 +63,8 @@ jobs:
         git commit -m "Apply Black formatting"
         echo "Current branch: ${{ github.head_ref }}"
         # git push origin "${{ github.head_ref }}"
-        git push
+        # git push
+        git push origin HEAD:${{ github.head_ref }}
 
     # - name: Commit changes
     #   if: ${{ steps.action_black.outputs.black_changed == 'true' }}
