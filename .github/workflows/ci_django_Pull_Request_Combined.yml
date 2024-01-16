@@ -62,8 +62,8 @@ jobs:
         git add .
         git commit -m "Apply Black formatting"
         echo "Current branch: ${{ github.head_ref }}"
-        git push origin "${{ github.head_ref }}"
-    #     # git push
+        # git push origin "${{ github.head_ref }}"
+        git push
 
     # - name: Commit changes
     #   if: ${{ steps.action_black.outputs.black_changed == 'true' }}
@@ -133,8 +133,8 @@ jobs:
         git add .
         git commit -m "Apply Prettier formatting"
         echo "Current branch: ${{ github.head_ref }}"
-        git push origin "${{ github.head_ref }}"
-    #     # git push
+        # git push origin "${{ github.head_ref }}"
+        git push
 
     # - name: Commit changes (Prettier)      
     #   if: steps.check_prettier.outputs.changes == 'true'    
