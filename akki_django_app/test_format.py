@@ -8,7 +8,7 @@ def poorly_formatted_function(x):
 
 
 def another_poorly_formatted_function():
-    print("This function is missing a colon")
+    print('This function is missing a colon')
     z = 4
     if z > 2:
         print("z is greater than 2")
