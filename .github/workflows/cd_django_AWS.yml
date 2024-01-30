@@ -19,3 +19,4 @@ jobs:
         chmod 400 private_key.pem
         ssh -i private_key.pem ec2-user@${{ secrets.EC2_IP_ADDRESS }} <<EOF
         ifconfig
+        EOF
