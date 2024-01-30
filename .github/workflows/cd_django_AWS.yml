@@ -18,6 +18,7 @@ jobs:
         # akki
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key.pem
         chmod 400 private_key.pem
+        ssh-keygen -R hostname
         # ssh -i private_key.pem ec2-user@${{ secrets.EC2_IP_ADDRESS }} <<EOF
         ssh -i private_key.pem -T ec2-user@${{ secrets.EC2_IP_ADDRESS }} <<EOF
         ifconfig
