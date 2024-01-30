@@ -16,6 +16,6 @@ jobs:
     - name: Deploy to EC2
       run: |
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key.pem
-        chmod 600 private_key.pem
+        chmod 400 private_key.pem
         ssh -i private_key.pem ec2-user@${{ secrets.EC2_IP_ADDRESS }} <<EOF
         ifconfig
