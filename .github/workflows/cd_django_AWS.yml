@@ -1,4 +1,4 @@
-name: CD Pipeline to Deploy the app
+name: CD Pipeline to Deploy the app to AWS EC2
 
 on:
   push:
