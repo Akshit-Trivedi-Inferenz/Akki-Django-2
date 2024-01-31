@@ -43,6 +43,6 @@ jobs:
         python3 manage.py makemigrations
         python3 manage.py migrate
         echo -e "\n Running the Server"
-        # python3 manage.py runserver 0.0.0.0:8000
-        python3 manage.py runserver 0.0.0.0:8000 --noreload --timeout 60
+        python3 manage.py runserver 0.0.0.0:8000 & sleep 300; kill $!
+        echo -e 
         EOF
