@@ -24,8 +24,8 @@ jobs:
         # ssh-keygen -R hostname
         # ssh -i private_key.pem ec2-user@${{ secrets.EC2_IP_ADDRESS }} <<EOF
         # chmod 400 ~/.ssh/known_hosts
-        ssh -i private_key.pem -T ec2-user@${{ secrets.EC2_IP_ADDRESS }} <<EOF
-        # ssh -i private_key.pem ubuntu@${{ secrets.EC2_IP_ADDRESS }} <<EOF
+        # ssh -i private_key.pem -T ec2-user@${{ secrets.EC2_IP_ADDRESS }} <<EOF
+        ssh -i private_key.pem ubuntu@${{ secrets.EC2_IP_ADDRESS }} <<EOF
         echo "HOSTNAME"
         hostname -I
         EOF
