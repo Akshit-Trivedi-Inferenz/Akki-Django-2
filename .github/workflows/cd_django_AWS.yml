@@ -28,4 +28,20 @@ jobs:
         ssh -i private_key.pem -T ubuntu@${{ secrets.EC2_IP_ADDRESS }} <<EOF
         echo "HOSTNAME"
         hostname -I
+        echo "Checking for Update" 
+        sudo apt-get update
+        sudo apt-get upgrade -y
+        echo "Installing pip"
+        sudo apt install python3-pip -y
+        echo "Cloning Repo"
+        git clone https://github.com/Akshit-Trivedi-Inferenz/Akki-Django-2.git
+        cd Akki-Django-2/
+        git checkout main
+        git pull origin main
+        pip install -r requirements.txt
+        cd akki_django_app/
+        python3 manage.py makemigrations
+        python3 manage.py migrate
+        echo "Running the Server"
+        python3 manage.py runserver 0.0.0.0:8000
         EOF
