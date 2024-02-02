@@ -1,7 +1,9 @@
 name: CD Pipeline to Deploy the app to AWS EC2
 
 on:
-  push:
+  # push:
+  #   branches: [ main ]
+  pull_request_target:
     branches: [ main ]
 
 jobs:
