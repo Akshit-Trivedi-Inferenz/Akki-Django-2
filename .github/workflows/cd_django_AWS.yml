@@ -49,6 +49,6 @@ jobs:
         echo -e "Cloning Molly"
         git clone git@github.com:inferenz-ai/Molly.git
         cd Molly/
-        git checkout main
-        git pull origin main
+        git checkout preDev
+        git pull origin preDev
         EOF
